@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Калькулятор сна</title>
+<style>
+    body {
+        font-family: Times New Roman;
+        color: white;
+        text-align: center;
+        background: url('https://i.pinimg.com/originals/d0/f4/2c/d0f42c595e63746ca3702896f73b4a16.jpg') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        margin-top: 25px;
+        background: rgba(0,0,0,0.6);
+        padding: 60px;
+        border-radius: 50px;
+        display: inline-block;
+     }
+    input, button {
+        margin: 15px;
+        padding: 15px;
+        border-radius: 7px;
+        border: none;
+        font-size: 16px;
+    }
+    .tips {
+        margin-top: 50px;
+        background: rgba(0,0,0,0.7);
+        padding: 20px;
+        font-size: 25px;
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+    }
+</style>
+
+<div class="container">
+    <h1>Калькулятор сна</h1>
+ 
+    <label>Время пробуждения:</label>
+    <input type="time" id="wakeTime">
+    <button onclick="calculateSleepTime()">Рассчитать опт. время засыпания</button> <br>
+ 
+    <label>Время засыпания:</label>
+    <input type="time" id="sleepTime">
+    <button onclick="calculateWakeTime()">Рассчитать опт. время пробуждения</button>
+ 
+    <div>
+        <input type="checkbox" id="extraTime">
+        <label for="extraTime">Учесть 15 минут для засыпания</label>
+    </div>
+ 
+    <h3>Результат:</h3>
+    <p id="result"></p>
+</div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендации для качественного сна</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: white;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: white;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-align: left; 
+        }
+        li {
+            margin-bottom: 8px;
+            text-align: left; 
+        }
+        strong {
+            color: #e5ebec; 
+        }
+        .source {
+            font-size: 0.9em;
+            color: white;
+            text-align: right;
+            margin-top: 30px;
+        }
+    </style>
+
+    <h1>Рекомендации для качественного и здорового сна</h1>
+    <p>Для качественного и здорового сна рекомендуется соблюдать режим, создавать комфортные условия в спальне и правильно питаться.</p>
+ 
+    <h2>Режим</h2>
+    <ul>
+        <li><strong>Ложиться и вставать в одно и то же время каждый день</strong>, чтобы поддерживать естественный цикл сна и бодрствования. Идеальное время для отхода ко сну — до 23:00 или хотя бы до полуночи.</li>
+        <li><strong>Важно утреннее освещение:</strong> 15–30 минут естественного света после пробуждения помогают синхронизировать выработку мелатонина вечером.</li>
+        <li><strong>Не заниматься активной физической или умственной деятельностью перед сном.</strong> Физическая активность способствует выработке эндорфинов — гормонов счастья и бодрости, которые могут затруднить засыпание. Умственная деятельность может стимулировать мозг и не давать ему переключиться в режим сна.</li>
+    </ul>
+ 
+    <h2>Условия</h2>
+    <ul>
+        <li><strong>Обеспечить темноту в комнате</strong> — в темноте вырабатывается мелатонин, гормон сна. Можно использовать шторы блэкаут или маску для сна.</li>
+        <li><strong>Проветривать комнату перед сном</strong> — свежий воздух расслабляет организм и помогает быстрее уснуть. Оптимальная температура — около 18–20°C.</li>
+        <li><strong>Ограничить количество электронных устройств в спальне</strong> — синий свет, шум и мерцание подавляют выработку мелатонина. Важно оставить только самое необходимое.</li>
+        <li><strong>Использовать мягкие и приятные на ощупь ткани</strong> для постельного белья, подушек и пледов — хлопок, лён, натуральный шёлк и бамбук.</li>
+    </ul>
+ 
+    <h2>Питание</h2>
+    <ul>
+        <li>Последний приём пищи стоит планировать <strong>за 2–3 часа до сна</strong>, делая его лёгким и сбалансированным.</li>
+        <li>Некоторые продукты, которые способствуют здоровому сну: <strong>яйца, ягоды (клубника, черешня, черника), киви, грецкие орехи, миндаль, фисташки, фундук и семена тыквы.</strong></li>
+        <li>Продукты, которые ухудшают сон: <strong>напитки с кофеином (кофе, чай, энергетики), жирная, солёная и тяжёлая пища, продукты с высоким гликемическим индексом.</strong></li>
+        <li>Оптимальное время для приёма пищи — <strong>за 3–4 часа до сна</strong> — за это время организм спокойно переварит пищу и подготовится ко сну без нагрузки на желудочно-кишечный тракт.</li>
+    </ul>
+ 
+<script>
+function calculateSleepTime() {
+    let wakeTime = document.getElementById('wakeTime').value;
+    let extraTime = document.getElementById('extraTime').checked ? 15 : 0;
+ 
+    if (!wakeTime) {
+        alert('Введите время пробуждения');
+        return;
+    }
+ 
+    let [hours, minutes] = wakeTime.split(':').map(Number);
+    let results = [];
+    for (let cycles = 4; cycles <= 6; cycles++) {
+        let totalMinutes = hours * 60 + minutes - cycles * 90 - extraTime;
+        if (totalMinutes < 0) totalMinutes += 24 * 60;
+        let resH = Math.floor(totalMinutes / 60);
+        let resM = totalMinutes % 60;
+        results.push(`${String(resH).padStart(2, '0')}:${String(resM).padStart(2, '0')}`);
+    }
+    document.getElementById('result').innerText = "Лучшее время засыпания: " + results.join(', ');
+}
+ 
+function calculateWakeTime() {
+    let sleepTime = document.getElementById('sleepTime').value;
+    let extraTime = document.getElementById('extraTime').checked ? 15 : 0;
+ 
+    if (!sleepTime) {
+        alert('Введите время засыпания');
+        return;
+    }
+ 
+    let [hours, minutes] = sleepTime.split(':').map(Number);
+    let results = [];
+    for (let cycles = 4; cycles <= 6; cycles++) {
+        let totalMinutes = hours * 60 + minutes + cycles * 90 + extraTime;
+        if (totalMinutes >= 24 * 60) totalMinutes -= 24 * 60;
+        let resH = Math.floor(totalMinutes / 60);
+        let resM = totalMinutes % 60;
+        results.push(`${String(resH).padStart(2, '0')}:${String(resM).padStart(2, '0')}`);
+    }
+    document.getElementById('result').innerText = "Лучшее время пробуждения: " + results.join(', ');
+}
+</script>
+ 
+</body>
+</html>
